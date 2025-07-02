@@ -16,5 +16,5 @@ jobs:
       - run: |
           cd cv
           npm install
-          npm build
+          npm run build
           find
