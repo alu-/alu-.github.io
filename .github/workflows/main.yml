@@ -2,7 +2,7 @@ name: Publish CV to Github Pages
 run-name: ${{ github.actor }} is publishing his CV to GitHub Pages 🚀
 on: [push]
 jobs:
-  publish-github-pages:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -18,3 +18,10 @@ jobs:
           npm install
           npm run build
           find
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/deploy-pages@v4
