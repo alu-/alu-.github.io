@@ -19,7 +19,7 @@ jobs:
           npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/
+          path: cv/dist/
   publish:
     runs-on: ubuntu-latest
     steps:
