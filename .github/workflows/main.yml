@@ -1,5 +1,5 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: Publish CV to Github Pages
+run-name: ${{ github.actor }} is publishing his CV to GitHub Pages 🚀
 on: [push]
 jobs:
   publish-github-pages:
@@ -12,4 +12,7 @@ jobs:
           path: cv
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 22.17.0
+      - run: cd cv
+      - run: npm build
+      - run: find
