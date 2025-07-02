@@ -13,6 +13,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22.17.0
-      - run: cd cv
-      - run: npm build
-      - run: find
+      - run: |
+          cd cv
+          npm install
+          npm build
+          find
