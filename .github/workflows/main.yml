@@ -8,6 +8,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: alu-/cv
+          token: ${{ secrets.GH_PAT }}
           path: cv
       - uses: actions/setup-node@v4
         with:
